@@ -208,6 +208,7 @@ footer{
     }
     footer{
         flex-direction: column;
+        margin-top: 3rem;
     }
     .leftfooter{
         width: 100vw;
