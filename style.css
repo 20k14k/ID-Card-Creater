@@ -180,23 +180,29 @@ footer{
   }
 @media(max-width: 767px) {
     html{
-        font-size: 13px;
+        font-size: 12px;
     }
     .container {
         justify-content: flex-start;
     }
     .header {
         height: fit-content;
-        padding: 1rem 0;
-        margin-bottom: 1rem;
+        padding: 0.45rem 0;
+        margin-bottom: .65rem;
+        font-size: 4rem;
     }
     .disclaimer {
         padding: 0.8rem 1rem;
-        margin-bottom: 2rem;
+        margin-bottom: 1.5rem;
+        font-size: 1.1rem;
     }
     .fillform{
         width: 90vw;
-        padding: 2.5rem 1.5rem;
+        padding: 2.5rem 0.75rem;
+        font-size: 1rem;
+    }
+    .fillform button {
+        font-size: 1.1rem;
     }
     footer{
         flex-direction: column;
