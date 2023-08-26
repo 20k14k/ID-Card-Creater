@@ -53,6 +53,7 @@ body {
 }
 .landerpage {
     z-index: 5;
+    background: url(images/landerbg.jpg) repeat scroll;
 }
 
 .header {
@@ -193,13 +194,14 @@ footer{
     }
     .disclaimer {
         padding: 0.8rem 1rem;
-        margin-bottom: 1.5rem;
+        margin-bottom:2rem;
         font-size: 1rem;
     }
     .fillform{
         width: 90vw;
         padding: 2.5rem 0.75rem;
         font-size: 1rem;
+        margin-bottom: 2rem;
     }
     .fillform button {
         font-size: 1.1rem;
