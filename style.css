@@ -157,11 +157,17 @@ footer{
 
 /* -------------Media Queries------------ */
 @media (min-width: 1024px) and (max-width: 1439px) {
+    html{
+        font-size: 15px;
+    }
     .fillform{
         width: 70vw;
     }
   }
 @media (min-width: 768px) and (max-width: 1024px) {
+    html{
+        font-size: 14px;
+    }
     .fillform{
         width: 75vw;
     }
@@ -173,6 +179,9 @@ footer{
     }
   }
 @media(max-width: 767px) {
+    html{
+        font-size: 13px;
+    }
     .container {
         justify-content: flex-start;
     }
