@@ -16,7 +16,7 @@ function submitForm() {
 
 document.getElementById("generate").addEventListener("click", generate)
 function generate() {
-    document.getElementById("output").style.width ='9.5cm'
+    document.getElementById("idcardholder").style.visibility ='visible'
     const name = document.getElementById("name").value;
     const course = document.getElementById("course").value;
     const roll = document.getElementById("roll").value;
@@ -60,3 +60,4 @@ function generate() {
     }
 
 }
+
