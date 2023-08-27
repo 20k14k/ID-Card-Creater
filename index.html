@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -11,6 +12,7 @@
     <link rel="stylesheet" href="style.css">
     <title>ID Card Designer</title>
 </head>
+
 <body>
     <div class="landerpage container" id="landerpage">
         <header>
@@ -26,7 +28,7 @@
         </div>
         <form class="fillform" onsubmit="return fillform()">
             <div style="display: flex; cursor: pointer;">
-                <input type="checkbox" name="check" id="accepttnc" style="cursor: pointer;">
+                <input type="checkbox" name="check" id="accepttnc" style="cursor: pointer;" required>
                 <label for="accepttnc" style="cursor: pointer;">I have read and understood the discalimer and ready to
                     create ID Card.</label>
             </div>
@@ -35,7 +37,6 @@
         <footer>
             <div class="leftfooter">
                 Designed and managed by <span>Karan Kushwaha</span>.
-                <!-- <img src="images/karan.png" alt=""> -->
             </div>
             <div class="rightfooter">
                 Do follow to Karan Kushwaha on
@@ -53,10 +54,10 @@
     <div class="formpage container" id="formpage">
         <form id="idCardForm" onsubmit="return submitForm()">
             <label for="name">Name:</label>
-            <input type="text" id="name" name="name">
+            <input type="text" id="name" name="name" required>
 
             <label for="course">Course:</label>
-            <select type="text" id="course" name="course">
+            <select type="text" id="course" name="course" required>
                 <option value="">---Select---</option>
                 <option value="B.Com">B.Com</option>
                 <option value="B.Com Hons.">B.Com Hons.</option>
@@ -65,25 +66,25 @@
             </select>
 
             <label for="roll">Roll No.:</label>
-            <input type="number" id="roll" name="roll">
+            <input type="number" id="roll" name="roll" required>
 
             <label for="dob">Date of Birth:</label>
-            <input type="date" id="dob" name="dob">
+            <input type="date" id="dob" name="dob" required>
 
             <label for="admissionDate">Admission Date:</label>
-            <input type="date" id="admissionDate" name="admissionDate">
+            <input type="date" id="admissionDate" name="admissionDate" required>
 
             <label for="fatherName">Father's Name:</label>
-            <input type="text" id="fatherName" name="fatherName">
+            <input type="text" id="fatherName" name="fatherName" required>
 
-            <label for="address">Address:</label>
-            <textarea id="address" name="address"></textarea>
+            <label for="address">Address:  <small>(Keep short.)</small></label>
+            <textarea id="address" name="address" required></textarea>
 
             <label for="phoneNumber">Phone Number:</label>
-            <input type="tel" id="phoneNumber" name="phoneNumber">
+            <input type="tel" id="phoneNumber" name="phoneNumber" required>
 
             <label for="aadhar">Aadhar No.:</label>
-            <input type="text" id="aadhar" name="aadhar">
+            <input type="text" id="aadhar" name="aadhar" required>
 
             <label for="photo">Photo:</label>
             <input type="file" id="photo" name="photo" accept="image/*">
@@ -97,18 +98,55 @@
         <div class="output-container">
             <h2>ID Card Preview</h2>
             <div id="output">
-                <div id="rename"></div>
-                <div id="recourse"></div>
-                <div id="rerollno"></div>
-                <div id="redob"></div>
-                <div id="readmd"></div>
-                <div id="refname"></div>
-                <div id="readd"></div>
-                <div id="rephno"></div>
-                <div id="reaadhar"></div>
+                <img src="images/ssnc.jpg" alt="">
+                <div class="logoname">
+                    <strong>Swami Shraddhanand College</strong>
+                    <br>
+                    <b>(University of Delhi)</b>
+                    <p>Alipur, Delhi-36 Phone:-27206533,27206722</p>
+                </div>
+                <div class="imagebox">
+                    <img src="images/karan.png" alt="" id="resphoto">
+                </div>
+                <p class="title">Student Identity Card</p>
+
+                <div id="rename">Karan Kumar Kushwaha</div>
+                <div class="fy">2023-24</div>
+                <div class="year">1st Year</div>
+                <div class="ques">
+                    <div>Course:</div>
+                    <div>Roll No.:</div>
+                    <div>Date of Birth:</div>
+                    <div>Date of Admission:</div>
+                    <div>Father's Name:</div>
+                    <div>Address:</div>
+                    <div>Phone No.:</div>
+                    <div>Aadhar No.:</div>
+                </div>
+                <div class="res">
+                    <div id="recourse">B.Com</div>
+                    <div id="rerollno">2224</div>
+                    <div id="redob">546556</div>
+                    <div id="readmd">546456</div>
+                    <div id="refname">Ajay Kushwaha</div>
+                    <div id="readd">512 KMP New Delhi</div>
+                    <div id="rephno">9315540041</div>
+                    <div id="reaadhar">570182661202</div>
+                </div>
+                <div class="sigbox">
+                    <div class="sign">
+                        <img src="images/sign.jpg" alt="">
+                    </div>
+                    <div class="signname">
+                        Principal Signature
+                    </div>
+                </div>
             </div>
         </div>
     </div>
+
     <script src="script.js"></script>
+
 </body>
+
 </html>
