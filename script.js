@@ -1,3 +1,4 @@
+
 function fillform() {
     let landerpage = document.getElementById("landerpage");
     landerpage.classList.add("nowfillform");
@@ -35,5 +36,26 @@ function generate() {
     document.getElementById("readd").innerText = address
     document.getElementById("rephno").innerText = phoneNumber
     document.getElementById("reaadhar").innerText = aadhar
+
+
+    const photoInput = document.getElementById('photo');
+    const selectedPhoto = photoInput.files[0];
+
+    // Check if a photo is selected
+    if (selectedPhoto) {
+        // Create a FileReader to read the selected photo
+        const reader = new FileReader();
+
+        reader.onload = function (e) {
+            // Update the src attribute of the uploadedPhoto img element
+            resphoto.src = e.target.result;
+        };
+
+        // Read the selected photo as a data URL
+        reader.readAsDataURL(selectedPhoto);
+    } else {
+        // Display an error message if no photo is selected
+        console.log('Please select a photo');
+    }
 
 }
