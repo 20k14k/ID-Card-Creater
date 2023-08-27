@@ -144,15 +144,177 @@ footer{
     font-size: 1.2rem;
 }
 
+.landerpage.nowfillform{
+    height: 0;
+}
+
+
 .formpage {
     z-index: 4;
+}
+.formpage.nowseeid{
+    height: 0;
+}
+/* Reset default margin and padding */
+body, h1, h2, h3, p, ul, li {
+    margin: 0;
+    padding: 0;
+}
+
+/* Apply a background color and center the form */
+#idCardForm {
+    background-color: #f5f5f5;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+/* Style form inputs */
+#idCardForm input[type="text"],
+#idCardForm input[type="number"],
+#idCardForm select,
+#idCardForm input[type="date"],
+#idCardForm input[type="tel"],
+#idCardForm textarea,
+#idCardForm button {
+    width: 100%;
+    padding: 15px;
+    margin-bottom: 20px;
+    border: none;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+    font-size: 16px;
+    color: #333;
+    transition: border-color 0.3s, box-shadow 0.3s;
+}
+#idCardForm input[type="file"] {
+    padding: 10px;
+    border: 1px solid #ccc;
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+}
+#idCardForm input[type="date"],#idCardForm textarea {
+    font-family: 'Poppins', sans-serif;
+}
+/* Apply styling to the submit button */
+#idCardForm button {
+    background-color: #007bff;
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+#idCardForm button:hover {
+    background-color: #0056b3;
+}
+
+/* Style labels */
+#idCardForm label {
+    font-weight: bold;
+    display: block;
+    text-align: left;
+    margin-bottom: 5px;
+    color: #333;
+}
+
+/* Add responsive behavior */
+@media screen and (max-width: 768px) {
+    #idCardForm {
+        padding: 20px;
+    }
+}
+
+
+.idcardholder {
+    z-index: 3;
+}
+
+
+/* Apply a background color and center the form */
+.form-container {
+    background-color: #f5f5f5;
+    padding: 20px;
+    text-align: center;
+    border-radius: 10px;
+    box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.1);
+    margin: 20px auto;
+    max-width: 600px;
+}
+
+/* Style form inputs */
+.form-container input[type="text"],
+.form-container input[type="date"],
+.form-container input[type="tel"],
+.form-container textarea,
+.form-container button {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+/* Apply styling to the submit button */
+.form-container button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+/* Style the output container */
+.output-container {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
+    margin: 20px auto;
+    max-width: 600px;
+}
+
+/* Style the output content */
+.output-container h2 {
+    margin-bottom: 15px;
+}
+
+.output-container p {
+    margin-bottom: 10px;
+    font-size: 16px;
+}
+
+/* Add responsive behavior */
+@media screen and (max-width: 768px) {
+    .form-container, .output-container {
+        max-width: 90%;
+    }
 }
 
 
 
 
 
+/* ------ ID card View------- */
+#output{
+    border: solid 2px var(--black);
+    border-radius: 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
 
+#output>div{
+    max-width: 500px;
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: solid 2px var(--black);
+}
 
 
 
