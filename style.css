@@ -230,9 +230,7 @@ body, h1, h2, h3, p, ul, li {
 }
 
 
-.idcardholder {
-    z-index: 3;
-}
+
 
 
 /* Apply a background color and center the form */
@@ -267,6 +265,11 @@ body, h1, h2, h3, p, ul, li {
     cursor: pointer;
 }
 
+.idcardholder {
+    z-index: 3;
+    visibility: collapse;
+    overflow: hidden;
+}
 /* Style the output container */
 .output-container {
     background-color: #fff;
@@ -274,14 +277,27 @@ body, h1, h2, h3, p, ul, li {
     border-radius: 10px;
     box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
     margin: 20px auto;
-    max-width: 600px;
+    width: fit-content;
 }
 
 /* Style the output content */
 .output-container h2 {
     margin-bottom: 15px;
 }
-
+#dnld{
+    display: inline-block;
+  padding: 10px 20px;
+  margin: 10px auto;
+  background-color: #3498db;
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
+  border: none;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
 /* Add responsive behavior */
 @media screen and (max-width: 768px) {
     .form-container, .output-container {
@@ -304,7 +320,7 @@ body, h1, h2, h3, p, ul, li {
     justify-content: center;
     align-items: center;
     height: 6cm;
-    width: 0.5cm;
+    width: 9.5cm;
     user-select: none;
     overflow: hidden;
 }
