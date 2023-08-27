@@ -1,9 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"> 
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -11,22 +12,27 @@
     <link rel="stylesheet" href="style.css">
     <title>ID Card Designer</title>
 </head>
+
 <body>
-    <div class="landerpage container">
+    <div class="landerpage container" id="landerpage">
         <header>
             <div class="header">
                 ID Card Designer
             </div>
         </header>
         <div class="disclaimer">
-            This Website is designed in order to maintain your privacy and Secure your information and data. Therefore this website has not any capacity to store and read your data, it only stores the provided information on your device and delets everything after generating ID Card because this website is not created by JavaScript and has not any Server at side of Creator.
+            This Website is designed in order to maintain your privacy and Secure your information and data. Therefore
+            this website has not any capacity to store and read your data, it only stores the provided information on
+            your device and delets everything after generating ID Card because this website is not created by JavaScript
+            and has not any Server at side of Creator.
         </div>
-        <form action="fillform" class="fillform">
+        <form class="fillform" onsubmit="return fillform()">
             <div style="display: flex; cursor: pointer;">
-                <input type="checkbox" name="check" id="accepttnc" required style="cursor: pointer;">
-                <label for="accepttnc" style="cursor: pointer;">I have read and understood the discalimer and ready to create ID Card.</label>
+                <input type="checkbox" name="check" id="accepttnc" style="cursor: pointer;">
+                <label for="accepttnc" style="cursor: pointer;">I have read and understood the discalimer and ready to
+                    create ID Card.</label>
             </div>
-            <button type="submit">Let's Create</button>
+            <button id="btnlander">Let's Create</button>
         </form>
         <footer>
             <div class="leftfooter">
@@ -36,18 +42,78 @@
             <div class="rightfooter">
                 Do follow to Karan Kushwaha on
                 <div class="links">
-                    <span> <a href="https://twitter.com/KaranKushwaha_" class="fa fa-twitter" target="_blank"></a> </span>
+                    <span> <a href="https://twitter.com/KaranKushwaha_" class="fa fa-twitter" target="_blank"></a>
+                    </span>
                     <span> <a href="https://t.co/LRmJiTyuFZ" class="fa fa-linkedin" target="_blank"></a> </span>
-                    <span> <a href="https://www.youtube.com/@karan_kushwaha09" class="fa fa-youtube" target="_blank"></a> </span>
+                    <span> <a href="https://www.youtube.com/@karan_kushwaha09" class="fa fa-youtube"
+                            target="_blank"></a> </span>
                 </div>
             </div>
         </footer>
     </div>
 
-    <div class="formpage container">
-        <form action="createID">
-            work in progress
+    <div class="formpage container" id="formpage">
+        <form id="idCardForm" onsubmit="return submitForm()">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name">
+
+            <label for="course">Course:</label>
+            <select type="text" id="course" name="course">
+                <option value="">---Select---</option>
+                <option value="B.Com">B.Com</option>
+                <option value="B.Com Hons.">B.Com Hons.</option>
+                <option value="BA Hons.">BA Hons.</option>
+                <option value="CA">CA</option>
+            </select>
+
+            <label for="roll">Roll No.:</label>
+            <input type="number" id="roll" name="roll">
+
+            <label for="dob">Date of Birth:</label>
+            <input type="date" id="dob" name="dob">
+
+            <label for="admissionDate">Admission Date:</label>
+            <input type="date" id="admissionDate" name="admissionDate">
+
+            <label for="fatherName">Father's Name:</label>
+            <input type="text" id="fatherName" name="fatherName">
+
+            <label for="address">Address:</label>
+            <textarea id="address" name="address"></textarea>
+
+            <label for="phoneNumber">Phone Number:</label>
+            <input type="tel" id="phoneNumber" name="phoneNumber">
+
+            <label for="aadhar">Aadhar No.:</label>
+            <input type="text" id="aadhar" name="aadhar">
+
+            <label for="photo">Photo:</label>
+            <input type="file" id="photo" name="photo" accept="image/*">
+
+            <button type="submit" id="generate">Generate ID Card</button>
         </form>
     </div>
+
+
+    <div class="idcardholder">
+        <div class="output-container">
+            <h2>ID Card Preview</h2>
+            <div id="output">
+                <div id="rename"></div>
+                <div id="recourse"></div>
+                <div id="rerollno"></div>
+                <div id="redob"></div>
+                <div id="readmd"></div>
+                <div id="refname"></div>
+                <div id="readd"></div>
+                <div id="rephno"></div>
+                <div id="reaadhar"></div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+
 </body>
+
 </html>
