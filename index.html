@@ -10,6 +10,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.3.2/html2canvas.min.js"></script>
     <title>ID Card Designer</title>
 </head>
 
@@ -87,14 +88,14 @@
             <input type="text" id="aadhar" name="aadhar" required>
 
             <label for="photo">Photo:</label>
-            <input type="file" id="photo" name="photo" accept="image/*">
+            <input type="file" id="photo" name="photo" accept="image/*" required>
 
             <button type="submit" id="generate">Generate ID Card</button>
         </form>
     </div>
 
 
-    <div class="idcardholder">
+    <div class="idcardholder" id="idcardholder">
         <div class="output-container">
             <h2>ID Card Preview</h2>
             <div id="output">
@@ -142,11 +143,23 @@
                     </div>
                 </div>
             </div>
+            <button id="dnld">Download as Photo</button>
         </div>
     </div>
 
     <script src="script.js"></script>
+    <script>
+        document.getElementById('dnld').addEventListener('click', function () {
+    const captureElement = document.getElementById('output');
 
+    html2canvas(captureElement).then(function(canvas) {
+      const downloadLink = document.createElement('a');
+      downloadLink.href = canvas.toDataURL('image/png');
+      downloadLink.download = 'captured-image.png';
+      downloadLink.click();
+    });
+  });
+    </script>
 </body>
 
 </html>
