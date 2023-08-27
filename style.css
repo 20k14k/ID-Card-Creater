@@ -282,11 +282,6 @@ body, h1, h2, h3, p, ul, li {
     margin-bottom: 15px;
 }
 
-.output-container p {
-    margin-bottom: 10px;
-    font-size: 16px;
-}
-
 /* Add responsive behavior */
 @media screen and (max-width: 768px) {
     .form-container, .output-container {
@@ -300,22 +295,116 @@ body, h1, h2, h3, p, ul, li {
 
 /* ------ ID card View------- */
 #output{
+    position: relative;
     border: solid 2px var(--black);
+    background-color: white;
     border-radius: 15px;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    height: 6cm;
+    width: 9.5cm;
+    user-select: none;
+}
+#output>img{
+    position: absolute;
+    top: 0.1cm;
+    left: 0.15cm;
+    width: 1.5cm;
+}
+.logoname{
+    position: absolute;
+    right: 0.15cm;
+    top: 0.15cm;
+    line-height: 0.4cm;
+    font-weight: bolder;
+    color: #0056b3;
+}
+.logoname>strong{
+    font-size: 18px;
+    font-weight: bolder;
+}
+.logoname>b{
+    font-weight: bold;
+    font-size: 13px;
+    margin-left: 2cm;
+}
+.logoname>p{
+    font-size: 12px;
+}
+.imagebox{
+    overflow: hidden;
+    height: 2.75cm;
+    width: 2.3cm;
+    border: solid 2px black;
+    position: absolute;
+    top: 1.7cm;
+    left: 0.15cm;
+}
+.imagebox img{
+    height: 2.75cm;
+    width: 2.3cm;
+}
+.title{
+    font-size: 11px;
+    font-weight: bold;
+    position: absolute;
+    top: 1.5cm;
+    left: 2.5cm;
+}
+#rename{
+    font-size: 13px;
+    font-weight: bold;
+    position: absolute;
+    top: 1.8cm;
+    left: 2.6cm;
+}
+.fy,.year{
+    color: red;
+    font-size: 11px;
+    font-weight: bolder;
+    position: absolute;
+    top: 1.5cm;
+    right: 0.2cm;
+    line-height: 0.4cm;
+}
+.year{
+    top: 1.8cm;
+    color: black;
+}
+.ques{
+    font-size: 11px;
+    font-weight: bold;
+    position: absolute;
+    top: 2.2cm;
+    left: 2.6cm;
+    line-height: 0.4cm;
+}
+.res{
+    font-size: 11px;
+    font-weight: bold;
+    position: absolute;
+    top: 2.2cm;
+    left: 5.5cm;
+    line-height: 0.4cm;
+}
+#readd{
+    position: relative;
+    left: -1.5cm;
 }
 
-#output>div{
-    max-width: 500px;
-    width: 100%;
-    padding: 10px;
-    margin: 10px 0;
-    border: solid 2px var(--black);
+.sigbox{
+    font-size: 9px;
+    font-weight: bold;
+    position: absolute;
+    bottom: 0.2cm;
+    left: 0.15cm;
 }
-
+.sign img{
+    width: 2.2cm;
+    height: 0.7cm;
+}
 
 
 /* -------------Media Queries------------ */
